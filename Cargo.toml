@@ -1,0 +1,17 @@
+[package]
+name = "superttt-python"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "superttt_python"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = {version = "0.23.2", features = ['experimental-async', "extension-module"]}
+# pyo3-asyncio = {version = "0.20", features = ["tokio-runtime"] }
+tokio = {version = "1.41.1", features = ['full']}
+superttt = {path = "../superttt"}
+num_cpus = "1.16.0"
+numpy = "0.23.0"

@@ -381,7 +381,7 @@ fn play_game_multiple_threads(
 // }
 
 /// A Python module implemented in Rust.
-#[pymodule]
+#[pymodule(name="superttt")]
 fn superttt_python(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<PyGame>()?;
     m.add_class::<PyPlayer>()?;
